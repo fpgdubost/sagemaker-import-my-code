@@ -13,7 +13,7 @@ sess = sagemaker.Session()  # Use the AWS region configured with the AWS CLI
 role = 'arn:aws:iam::931683541123:role/service-role/AmazonSageMaker-ExecutionRole-20220610T135217'
 
 # Store model locally. A S3 URI would work too.
-output_path = 'file:///home/ubuntu/sagemaker-setup-example/test_local_outputs/1/'
+output_path = 'file:///home/ubuntu/sagemaker-import-my-code/test_local_outputs/1/'
 
 estimator = Estimator(  
     entry_point='train.py', # needs to be in the local path, but does not actually read it, not sure why, but it should be called train 
@@ -24,7 +24,7 @@ estimator = Estimator(
     output_path=output_path
 )
 
-estimator.fit('file:////home/ubuntu/sagemaker-setup-example/data/2/')
+estimator.fit('file:////home/ubuntu/sagemaker-import-my-code/data/2/')
 
 
 
