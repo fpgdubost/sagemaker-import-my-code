@@ -97,13 +97,13 @@ Run `create_container.sh`.
 
 ### Optional:
 
-Test container interactively:
+Test container interactively, replace `763104351884.dkr.ecr.us-west-2.amazonaws.com/tensorflow-training:2.8.0-gpu-py39-cu112-ubuntu20.04-sagemaker` with your container ID, which you can find on ECR on the AWS web platform and run the following:
 
-`docker run -it --rm --runtime=nvidia 763104351884.dkr.ecr.us-west-2.amazonaws.com/tensorflow-training:2.8.0-gpu-py39-cu112-ubuntu20.04-sagemaker`
+`docker run -it --rm --runtime=nvidia 931683541123.dkr.ecr.us-west-2.amazonaws.com/sagemaker-extend`
 
 or
 
-`docker run -it --rm 763104351884.dkr.ecr.us-west-2.amazonaws.com/tensorflow-training:2.8.0-gpu-py39-cu112-ubuntu20.04-sagemaker`
+`docker run -it --rm 931683541123.dkr.ecr.us-west-2.amazonaws.com/sagemaker-extend`
 
 ## 4. Add code to container
 
@@ -155,7 +155,7 @@ That variable will actually have the value `'/opt/ml/input/train/dataset_for_tra
 ### Checking container
 Again, you can verify your container interactively with 
 ```
-docker run -it --rm 931683541123.dkr.ecr.us-west-2.amazonaws.com/training-example
+docker run -it --rm 931683541123.dkr.ecr.us-west-2.amazonaws.com/training-example11
 ```
 You can find the container URI on ECR in AWS's website.
 
@@ -238,7 +238,7 @@ Example:
 
 You can also retrieve data from S3 using boto3 for python. But usually, you will need more line of code than using the CLI.
 
-## Hyperparameters (example) 
+## Hyperparameter Tuning
 
 With SageMaker, you can perform automatic hyperparameters optimization with bayesian search (default). You can also chose other types of optimization (like grid search), but bayesian search has been shown to be more efficient.
 
