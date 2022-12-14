@@ -238,7 +238,7 @@ Example:
 
 You can also retrieve data from S3 using boto3 for python. But usually, you will need more line of code than using the CLI.
 
-## Hyperparameter Tuning
+## 7. Hyperparameter Tuning
 
 With SageMaker, you can perform automatic hyperparameters optimization with bayesian search (default). You can also chose other types of optimization (like grid search), but bayesian search has been shown to be more efficient.
 
